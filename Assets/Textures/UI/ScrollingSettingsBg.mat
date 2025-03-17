@@ -108,7 +108,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
-    - _RealTime: 1.0809883
+    - _RealTime: 1.9449973
     - _ReceiveShadows: 1
     - _Rotation: 0
     - _Scale: 2
@@ -136,6 +136,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &4308814119829999799
 MonoBehaviour:
   m_ObjectHideFlags: 11
