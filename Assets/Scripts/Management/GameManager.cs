@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] public ScrollManager scrollManager;
     [SerializeField] private FanfareEvent _fanfareEventScript;
+    [SerializeField] public DreamwaveVideoStreamer DreamwaveVideoStreamer;
 
     [Header("States")]
     [SerializeField] public Focus focus;
@@ -156,6 +157,8 @@ public class GameManager : MonoBehaviour
 #endif
         SongPlaybackPosition = (float)AudioSettings.dspTime;
         SongDuration = TempoManager.instance.audioSource.clip.length;
+
+        DreamwaveVideoStreamer = GameObject.Find("Dreamwave Video").GetComponent<DreamwaveVideoStreamer>();
         
         var allNotes = GameObject.FindGameObjectsWithTag("Note");
         for (int i = 0; i < allNotes.Length; i++)

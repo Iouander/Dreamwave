@@ -80,7 +80,7 @@ public class CameraSystem : MonoBehaviour
     float zoom = 60f;
     private void ZoomEffect(int step)
     {
-        if (step == 2) { zoom = 50f; StartCoroutine(UnZoom()); }
+        if (step == 1) { zoom = 50f; StartCoroutine(UnZoom()); }
     }
 
     private IEnumerator UnZoom()

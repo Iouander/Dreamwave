@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static GameManager;
 
 public enum TypeOfScrollEvent 
 {
@@ -24,6 +25,9 @@ public class ScrollEvents : MonoBehaviour
 
     [Header("Animation")]
     [Tooltip("If this event doesn't make use of animations, don't drag one into this variable.")][SerializeField] private Animation eventAnim;
+
+    [Header("Cutscene")]
+    [SerializeField] private string _cutscenePath;
 
     private void FocusCentre()
     {
@@ -57,6 +61,7 @@ public class ScrollEvents : MonoBehaviour
                 case TypeOfScrollEvent.ChangeSongSpeed: ChangeSongSpeed(); break;
                 case TypeOfScrollEvent.Animation: eventAnim.Play(); break;
                 case TypeOfScrollEvent.InstantRestart: SceneManager.LoadScene(SceneManager.GetActiveScene().name); break;
+                case TypeOfScrollEvent.Cutscene: Instance.DreamwaveVideoStreamer.InitLoad(_cutscenePath); break;
             }
         }
     }
