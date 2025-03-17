@@ -453,10 +453,10 @@ public class GameManager : MonoBehaviour
         switch (onBeat)
         {
             case true:
-                if (step == 2) onBeat = false;
+                if (step == 1) onBeat = false;
                 break;
             case false:
-                if (step == 2) onBeat = true;
+                if (step == 1) onBeat = true;
                 break;
         }
 
