@@ -16,7 +16,7 @@ public class MusicPlayer : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         tracks = new Queue<string>();
-        path = Path.Combine(Application.streamingAssetsPath, "Music", "Menu");
+        path = Path.Combine(Application.streamingAssetsPath, "Music", "Settings");
 
         DirectoryInfo directoryInfo = new DirectoryInfo(path);
         FileInfo[] wavFiles = directoryInfo.GetFiles("*.wav");
